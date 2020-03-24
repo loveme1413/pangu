@@ -1,0 +1,13 @@
+{
+    "title": "pangu使用手册",
+    "author": "spy",
+    "language" : "zh-hans",
+    "description": "Make you happy!",
+    "extension": null,
+
+    "plugins": [
+    ],
+
+    "pluginsConfig": {
+    }
+}

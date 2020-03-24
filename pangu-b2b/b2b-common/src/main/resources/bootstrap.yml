@@ -1,0 +1,29 @@
+#
+#
+spring:
+  data:
+    redis:
+      repositories:
+        enabled: false
+
+#
+#请求处理的超时时间
+ribbon:
+  ReadTimeout: 120000
+  #请求连接的超时时间
+  ConnectTimeout: 30000
+#
+# 开启全局熔断
+# TODO 本地开发时建议关闭
+feign:
+  hystrix:
+    enabled: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            # 10s
+            timeoutInMilliseconds: 10000

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.miaosuan.pangu</groupId>
+    <artifactId>pangu-b2b</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>b2b-product</module>
+        <module>base-infrastructure</module>
+        <module>b2b-common</module>
+        <module>b2b-mall-server</module>
+    </modules>
+
+
+    <parent>
+        <groupId>com.miaosuan.pangu</groupId>
+        <artifactId>pangu-root</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <ms.pangu.core.version>1.0-SNAPSHOT</ms.pangu.core.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-all</artifactId>
+                <version>${ms.pangu.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-common</artifactId>
+                <version>${ms.pangu.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-spring-boot-starter</artifactId>
+                <version>${ms.pangu.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-test</artifactId>
+                <version>${ms.pangu.core.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>b2b-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+</project>

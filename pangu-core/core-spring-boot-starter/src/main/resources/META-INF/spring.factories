@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.miaosuan.pangu.core.boot.autoconfigure.PanguCoreAutoConfigure

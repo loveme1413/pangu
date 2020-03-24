@@ -1,0 +1,60 @@
+{
+  "groups": [
+    {
+      "name": "pangu",
+      "type": "com.miaosuan.pangu.core.boot.autoconfigure.PanguProperties",
+      "sourceType": "com.miaosuan.pangu.core.boot.autoconfigure.PanguProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "pangu.fastjson.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.miaosuan.pangu.core.boot.autoconfigure.PanguProperties",
+      "defaultValue": true,
+      "description": "是否启用FastJSON作为消息处理"
+    },
+    {
+      "name": "pangu.redis.lock.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.miaosuan.pangu.core.boot.autoconfigure.PanguProperties",
+      "defaultValue": true,
+      "description": "是否使用框架的分布式锁"
+    },
+    {
+      "name": "pangu.feign.error-decoder.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.miaosuan.pangu.core.boot.autoconfigure.PanguProperties",
+      "defaultValue": true,
+      "description": "是否使用框架的Feign错误解码处理"
+    },
+    {
+      "name": "pangu.feign.mdc-interceptor.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.miaosuan.pangu.core.boot.autoconfigure.PanguProperties",
+      "defaultValue": true,
+      "description": "是否使用框架的FeignMDC处理器"
+    },
+    {
+      "name": "pangu.feign.log-level.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.miaosuan.pangu.core.boot.autoconfigure.PanguProperties",
+      "defaultValue": true,
+      "description": "是否使用框架的Feign日志打印"
+    },
+    {
+      "name": "pangu.Web.mdc-interceptor.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.miaosuan.pangu.core.boot.autoconfigure.PanguProperties",
+      "defaultValue": true,
+      "description": "是否使用Web请求的MDC拦截器"
+    },
+    {
+      "name": "pangu.Web.mdc-interceptor.path-list",
+      "type": "java.lang.String[]",
+      "sourceType": "com.miaosuan.pangu.core.boot.autoconfigure.PanguProperties",
+      "defaultValue": "/api/**",
+      "description": "使用Web请求的MDC拦截器的地址"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+#
+server:
+  port: 9200
+#
+# log
+logging:
+  file: ${spring.application.name}
+  path: ${user.home}/logs
+
+#
+# spring
+spring:
+  application:
+    name: mall-service
+  profiles:
+    active: local
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rm-bp1351y9g948365jazo.mysql.rds.aliyuncs.com:3306/b2b-test?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=true&allowMultiQueries=true
+    username: miaosuan
+    password: miaosuan@123
+    durid:
+      initial-size: 1
+      max-active: 20
+      min-idle: 5
+      max-wait: 60000
+
+  redis:
+    host: 47.96.140.114
+    port: 6379
+    password: miaosuan@123
+    database: 0
+
+#
+#eureka
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+
+#请求处理的超时时间
+ribbon:
+  ReadTimeout: 120000
+  #请求连接的超时时间
+  ConnectTimeout: 30000
+#
+#
+management:
+  security:
+    enabled: false

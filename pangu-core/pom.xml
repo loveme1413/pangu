@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.miaosuan.pangu</groupId>
+    <artifactId>pangu-core</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>core-common</module>
+        <module>core-orm</module>
+        <module>core-cache</module>
+        <module>core-all</module>
+        <module>core-feign</module>
+        <module>core-mvc</module>
+        <module>core-test</module>
+        <module>core-spring-boot-starter</module>
+    </modules>
+
+    <parent>
+        <groupId>com.miaosuan.pangu</groupId>
+        <artifactId>pangu-root</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <pangu.core.version>1.0-SNAPSHOT</pangu.core.version>
+    </properties>
+
+    <dependencyManagement>
+
+        <dependencies>
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-common</artifactId>
+                <version>${pangu.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-orm</artifactId>
+                <version>${pangu.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-cache</artifactId>
+                <version>${pangu.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-feign</artifactId>
+                <version>${pangu.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-mvc</artifactId>
+                <version>${pangu.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miaosuan.pangu</groupId>
+                <artifactId>core-test</artifactId>
+                <version>${pangu.core.version}</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+
+</project>

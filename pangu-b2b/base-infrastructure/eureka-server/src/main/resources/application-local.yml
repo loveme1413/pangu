@@ -1,0 +1,3 @@
+logging:
+  file: ${spring.application.name}
+  path: ${user.home}/logs

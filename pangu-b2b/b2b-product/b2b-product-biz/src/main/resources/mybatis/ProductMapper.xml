@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.miaosuan.pangu.b2b.product.biz.product.dao.ProductMapper">
+    <resultMap id="BaseResultMap" type="com.miaosuan.pangu.b2b.product.biz.product.entity.Product">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="product_id" jdbcType="BIGINT" property="productId"/>
+        <result column="attr_template_id" jdbcType="BIGINT" property="attrTemplateId"/>
+        <result column="attr_template_name" jdbcType="VARCHAR" property="attrTemplateName"/>
+        <result column="brand_id" jdbcType="BIGINT" property="brandId"/>
+        <result column="brand_name" jdbcType="VARCHAR" property="brandName"/>
+        <result column="price_group_id" jdbcType="BIGINT" property="priceGroupId"/>
+        <result column="price_group_name" jdbcType="VARCHAR" property="priceGroupName"/>
+        <result column="brief_name" jdbcType="VARCHAR" property="briefName"/>
+        <result column="catalog_id_path" jdbcType="VARCHAR" property="catalogIdPath"/>
+        <result column="catalog_name_path" jdbcType="VARCHAR" property="catalogNamePath"/>
+        <result column="category_id" jdbcType="BIGINT" property="categoryId"/>
+        <result column="category_id_path" jdbcType="VARCHAR" property="categoryIdPath"/>
+        <result column="category_name" jdbcType="VARCHAR" property="categoryName"/>
+        <result column="category_name_path" jdbcType="VARCHAR" property="categoryNamePath"/>
+        <result column="be_referenced_times" jdbcType="INTEGER" property="beReferencedTimes"/>
+        <result column="cover_image" jdbcType="VARCHAR" property="coverImage"/>
+        <result column="keywords" jdbcType="VARCHAR" property="keywords"/>
+        <result column="is_muslim" jdbcType="BIT" property="isMuslim"/>
+        <result column="expiration_date" jdbcType="VARCHAR" property="expirationDate"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="next_delivery_time" jdbcType="TIMESTAMP" property="nextDeliveryTime"/>
+        <result column="price_float_data" jdbcType="VARCHAR" property="priceFloatData"/>
+        <result column="product_model" jdbcType="VARCHAR" property="productModel"/>
+        <result column="product_no" jdbcType="VARCHAR" property="productNo"/>
+        <result column="product_status" jdbcType="VARCHAR" property="productStatus"/>
+        <result column="product_type" jdbcType="VARCHAR" property="productType"/>
+        <result column="tag_ids" jdbcType="VARCHAR" property="tagIds"/>
+        <result column="tags" jdbcType="VARCHAR" property="tags"/>
+        <result column="trader_id" jdbcType="BIGINT" property="traderId"/>
+        <result column="display_order" jdbcType="INTEGER" property="displayOrder"/>
+        <result column="enabled" jdbcType="BIT" property="enabled"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="deleted" jdbcType="BIT" property="deleted"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_user_id" jdbcType="BIGINT" property="createUserId"/>
+        <result column="create_user_name" jdbcType="VARCHAR" property="createUserName"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="update_user_id" jdbcType="BIGINT" property="updateUserId"/>
+        <result column="update_user_name" jdbcType="VARCHAR" property="updateUserName"/>
+        <result column="version" jdbcType="INTEGER" property="version"/>
+        <result column="process_fee" jdbcType="DECIMAL" property="processFee"/>
+        <result column="cargo_owner_id" jdbcType="BIGINT" property="cargoOwnerId"/>
+    </resultMap>
+    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs"
+               type="com.miaosuan.pangu.b2b.product.biz.product.entity.Product">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <result column="attr_data" jdbcType="LONGVARCHAR" property="attrData"/>
+        <result column="spec_data" jdbcType="LONGVARCHAR" property="specData"/>
+        <result column="packaging_unit_data" jdbcType="LONGVARCHAR" property="packagingUnitData"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        product_id, attr_template_id, attr_template_name, brand_id, brand_name, price_group_id,
+        price_group_name, brief_name, catalog_id_path, catalog_name_path, category_id, category_id_path,
+        category_name, category_name_path, be_referenced_times, cover_image, keywords, is_muslim,
+        expiration_date, name, next_delivery_time, price_float_data, product_model, product_no,
+        product_status, product_type, tag_ids, tags, trader_id, display_order, enabled, remark,
+        deleted, create_time, create_user_id, create_user_name, update_time, update_user_id,
+        update_user_name, version, process_fee, cargo_owner_id
+    </sql>
+    <sql id="Blob_Column_List">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        attr_data, spec_data, packaging_unit_data
+    </sql>
+</mapper>

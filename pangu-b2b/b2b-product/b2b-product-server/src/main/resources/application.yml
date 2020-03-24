@@ -1,0 +1,60 @@
+#
+server:
+  port: 9101
+#
+# log
+logging:
+  file: ${spring.application.name}
+  path: ${user.home}/logs
+
+#
+# spring
+spring:
+  application:
+    name: product-service
+  profiles:
+    active: local
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rm-bp1351y9g948365jazo.mysql.rds.aliyuncs.com:3306/b2b-dev?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=true&allowMultiQueries=true
+    username: b2b_dev
+    password: B2B-dev123
+    durid:
+      initial-size: 1
+      max-active: 20
+      min-idle: 5
+      max-wait: 60000
+  redis:
+    host: 47.96.140.114
+    port: 6379
+    password: miaosuan@123
+    database: 0
+    lettuce:
+      pool:
+        max-active: 20
+        min-idle: 1
+  messages:
+    basename: message/pangu-core/i18n,message/product
+
+#
+#eureka
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+#
+#
+management:
+  security:
+    enabled: false
+
+#
+# rocketmq
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: ${spring.application.name}-group

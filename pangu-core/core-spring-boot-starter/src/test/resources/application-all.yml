@@ -1,0 +1,11 @@
+pangu:
+  feign:
+    log:
+      enable: true
+    mdc-interceptor:
+      enable: true
+  fastjson:
+    enable: true
+  redis:
+    lock:
+      enable: true
